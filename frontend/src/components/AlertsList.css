@@ -1,0 +1,461 @@
+.alerts-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.alerts-header {
+  margin-bottom: 2rem;
+}
+
+.alerts-header h2 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.alerts-header p {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.alerts-controls {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: white;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.alert-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 6px solid;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.alert-card:hover {
+  transform: translateX(5px);
+}
+
+.alert-card.critical {
+  border-left-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.alert-card.high {
+  border-left-color: #ed8936;
+  background: #fffaf0;
+}
+
+.alert-card.medium {
+  border-left-color: #ecc94b;
+  background: #fffff0;
+}
+
+.alert-card.low {
+  border-left-color: #48bb78;
+  background: #f0fff4;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.alert-type {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}
+
+.alert-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.risk-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.risk-badge.critical {
+  background: #e53e3e;
+  color: white;
+}
+
+.risk-badge.high {
+  background: #ed8936;
+  color: white;
+}
+
+.risk-badge.medium {
+  background: #ecc94b;
+  color: #2d3748;
+}
+
+.risk-badge.low {
+  background: #48bb78;
+  color: white;
+}
+
+.alert-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alert-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.alert-detail strong {
+  color: #2d3748;
+  margin-right: 0.5rem;
+}
+
+.accounts-chain {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.account-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+/* ✅ NUEVO: Resaltar cuenta inicial del ciclo */
+.account-badge.highlight {
+  background: #e53e3e;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(229, 62, 62, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(229, 62, 62, 0.8);
+  }
+}
+
+.arrow {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ✅ NUEVO: Flecha de ciclo más visible */
+.cycle-arrow {
+  color: #e53e3e;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.alert-info {
+  background: #edf2f7;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.warning-badge {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.no-alerts {
+  background: white;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.no-alerts-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.no-alerts h3 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-alerts p {
+  color: #718096;
+  font-size: 1rem;
+}
+
+/* ============================================ */
+/* ESTILOS PARA TABLAS DE TRANSACCIONES */
+/* ============================================ */
+
+.transactions-table {
+  margin: 1.5rem 0;
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.transactions-table h4 {
+  color: #2d3748;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.transactions-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.transactions-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #5568d3;
+}
+
+.transactions-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.transactions-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.transactions-table tbody tr:hover {
+  background: #edf2f7;
+}
+
+.transactions-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ✅ NUEVO: Numeración de pasos */
+.step-number {
+  font-weight: 900;
+  color: #667eea;
+  font-size: 1.1rem;
+  text-align: center;
+  background: #e6e9ff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.txn-id {
+  font-family: 'Courier New', monospace;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.account-mini {
+  background: #e6e9ff;
+  color: #667eea;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: monospace;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* ✅ NUEVO: Flecha en tabla */
+.arrow-cell {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.amount {
+  color: #2d3748;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timestamp {
+  color: #718096;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  font-family: monospace;
+}
+
+/* ✅ NUEVO: Fila de cierre de ciclo */
+.cycle-closure {
+  background: #fff5f5 !important;
+  border-top: 3px solid #e53e3e;
+}
+
+.closure-note {
+  text-align: center;
+  font-weight: 700;
+  color: #c53030;
+  padding: 1rem !important;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.closure-note .account-mini {
+  background: #e53e3e;
+  color: white;
+  margin: 0 0.5rem;
+}
+
+/* Responsive para tablas */
+@media (max-width: 1024px) {
+  .transactions-table {
+    font-size: 0.85rem;
+  }
+  
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .transactions-table {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.5rem;
+  }
+  
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .timestamp {
+    font-size: 0.75rem;
+  }
+  
+  .account-mini {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

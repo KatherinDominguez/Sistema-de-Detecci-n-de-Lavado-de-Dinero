@@ -1,0 +1,41 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Archivos de datos generados
+transactions.csv
+*.csv
+
+# Node.js / Frontend
+node_modules/
+dist/
+.npm
+.vite/
+*.log
+package-lock.json
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Variables de entorno
+.env
+.env.local
